@@ -8,8 +8,6 @@ Installation
 ------------
 To install, either run
 
-$ php composer.phar require kartik-v/yii2-widget-datetimepicker "*"
-
     $ php composer.phar require codefellow/giigenerators "@dev"
 
 or add
