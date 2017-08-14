@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace codefellow\generators\model;
+namespace codefellow\giigenerators\model;
 
 use Yii;
 use yii\db\ActiveQuery;

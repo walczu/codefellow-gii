@@ -1,5 +1,5 @@
 <?php
-namespace codefellow\generators\crud;
+namespace codefellow\giigenerators\crud;
 
 use Yii;
 use yii\db\ActiveRecord;
