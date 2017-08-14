@@ -1,3 +1,9 @@
+yii2-codefellow-giigenerators
+------------
+New personalized GII's generators:
+1. Model
+2. CRUD
+
 Installation
 ------------
 To install, either run
