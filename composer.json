@@ -1,0 +1,32 @@
+{
+    "name": "codefellow/generators",
+    "description": "Codefellow's model and crud generator",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","ajax","crud","gii","template","database"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Pawel Walczewski",
+            "email": "pawel.walczewski@codefellow.pl",
+            "homepage": "https://github.com/walczu?tab=repositiories"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/walczu/codefellow-gii/issues",
+        "source": "https://github.com/walczu/codefellow-gii"
+    },
+    "require": {
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-gii": "*",
+        "yiisoft/yii2-bootstrap": "*",
+	    "kartik-v/yii2-grid": "^3.0.4",
+        "kartik-v/yii2-mpdf": "^1.0.0",
+        "kartik-v/yii2-editable": "^1.7.3",
+        "johnitvn/yii2-ajaxcrud": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "codefellow\\generators\\": "src/"
+        }
+    }
+}
