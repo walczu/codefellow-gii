@@ -26,7 +26,7 @@ Usage
             'codefellow-crud' => [ // generator name
                 'class' => 'codefellow\giigenerators\crud\Generator', // generator class
                 'templates' => [ //setting for out templates
-                    't-translation' => '@app/codefellow/generators/crud/t-translation', // template name => path to template
+                    't-translation' => '@vendor/codefellow/giigenerators/src/crud/t-translation', // template name => path to template
                 ]
             ]
         ],
