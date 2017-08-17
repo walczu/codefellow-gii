@@ -42,9 +42,9 @@ CrudAsset::register($this);
             'toolbar'=> [
                 ['content'=>
                     Html::a('<i class="fa fa-plus" aria-hidden="true"></i>', ['create'],
-                    ['role'=>'modal-remote','title'=> 'Dodaj','class'=>'btn btn-default']).
+                    ['role'=>'modal-remote','title'=> <?= Yii::t('app', 'Add') ?>,'class'=>'btn btn-default']).
                     Html::a('<i class="fa fa-repeat" aria-hidden="true"></i>', [''],
-                    ['data-pjax'=>1, 'class'=>'btn btn-default', 'title'=>'Odśwież']).
+                    ['data-pjax'=>1, 'class'=>'btn btn-default', 'title'=><?= Yii::t('app', 'Refresh') ?>]).
                     '{toggleData}'.
                     '{export}'
                 ],
@@ -54,7 +54,7 @@ CrudAsset::register($this);
             'responsive' => true,          
             'panel' => [
                 'type' => 'primary', 
-                'heading' => '<i class="fa fa-list" aria-hidden="true"></i> <?= $generator->plModelNamePlural ?> - lista',
+                'heading' => '<i class="fa fa-list" aria-hidden="true"></i> <?= $generator->plModelNamePlural ?> - <?= Yii::t('app', 'list') ?>',
             ]
         ])<?="?>\n"?>
     </div>

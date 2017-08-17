@@ -147,7 +147,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
             Yii::$app->response->format = Response::FORMAT_JSON;
             if($request->isGet){
                 return [
-                    'title'=> Yii::t('app', 'New') . " " . $modelClass,
+                    'title'=> Yii::t('app', 'New') . " " . <?= $modelClass ?>,
                     'content'=>$this->renderAjax('create', [
                         'model' => $model,
                     ]),
@@ -158,7 +158,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
             }else if($model->load($request->post()) && $model->save()){
                 return [
                     'forceReload'=>'#crud-datatable-pjax',
-                    'title'=> Yii::t('app', 'New') . " " . $modelClass,
+                    'title'=> Yii::t('app', 'New') . " " . <?= $modelClass ?>,
                     'content'=>'<span class="text-success"><?= Yii::t('app', 'Created!') ?></span>',
                     'footer'=> Html::button(Yii::t('app', 'Close'),['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
                             Html::a(Yii::t('app', 'Create More'),['create'],['class'=>'btn btn-primary','role'=>'modal-remote'])
@@ -166,7 +166,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
                 ];         
             }else{           
                 return [
-                    'title'=> Yii::t('app', 'New') . " " . $modelClass,
+                    'title'=> Yii::t('app', 'New') . " " . <?= $modelClass ?>,
                     'content'=>$this->renderAjax('create', [
                         'model' => $model,
                     ]),
@@ -209,7 +209,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
             Yii::$app->response->format = Response::FORMAT_JSON;
             if($request->isGet){
                 return [
-                    'title'=> Yii::t('app', 'Update') . " " . $modelClass . "#".<?= $actionParams ?>,
+                    'title'=> Yii::t('app', 'Update') . " " . <?= $modelClass ?> . "#".<?= $actionParams ?>,
                     'content'=>$this->renderAjax('update', [
                         'model' => $model,
                     ]),
@@ -228,7 +228,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
                 ];    
             }else{
                  return [
-                    'title'=> Yii::t('app', 'Update') . " " . $modelClass . "#".<?= $actionParams ?>,
+                    'title'=> Yii::t('app', 'Update') . " " . <?= $modelClass ?> . "#".<?= $actionParams ?>,
                     'content'=>$this->renderAjax('update', [
                         'model' => $model,
                     ]),
@@ -313,7 +313,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
      * Finds the <?= $modelClass ?> model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * <?= implode("\n     * ", $actionParamComments) . "\n" ?>
-     * @return <?=                   $modelClass ?> the loaded model
+     * @return <?= $modelClass ?> the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel(<?= $actionParams ?>)
