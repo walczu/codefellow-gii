@@ -53,8 +53,16 @@ CrudAsset::register($this);
             'condensed' => true,
             'responsive' => true,          
             'panel' => [
-                'type' => 'primary', 
+                'type' => 'default',
                 'heading' => '<i class="fa fa-list" aria-hidden="true"></i> <?= $generator->plModelNamePlural ?> - lista',
+            ],
+            'export' => [
+                'target' => '_self',
+                'showConfirmAlert' => false,
+            ],
+            'exportConfig' => [
+                GridView::EXCEL => true,
+                GridView::CSV => true
             ]
         ])<?="?>\n"?>
     </div>
