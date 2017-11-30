@@ -24,6 +24,7 @@ return [
     [
         'class' => 'kartik\grid\CheckboxColumn',
         'width' => '20px',
+        'hiddenFromExport' => true
     ],
     [
         'class' => 'kartik\grid\SerialColumn',
