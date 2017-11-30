@@ -38,6 +38,8 @@ CrudAsset::register($this);
             'dataProvider' => $dataProvider,
             'filterModel' => $searchModel,
             'pjax'=>true,
+            'panelHeadingTemplate' => '{heading}{summary}{toolbar}',
+            'panelTemplate' => '<div class="panel {type}">{panelHeading}{items}{panelAfter}{panelFooter}</div>',
             'columns' => require(__DIR__.'/_columns.php'),
             'toolbar'=> [
                 ['content'=>
