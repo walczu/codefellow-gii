@@ -58,14 +58,14 @@ return [
         'urlCreator' => function($action, $model, $key, $index) { 
                 return Url::to([$action,'<?=substr($actionParams,1)?>'=>$key]);
         },
-        'viewOptions'=>['role'=>'modal-remote','title'=>'Szczegóły','data-toggle'=>'tooltip'],
-        'updateOptions'=>['role'=>'modal-remote','title'=>'Edytuj', 'data-toggle'=>'tooltip'],
-        'deleteOptions'=>['role'=>'modal-remote','title'=>'Usuń',
+        'viewOptions'=>['role'=>'modal-remote','title'=>Yii::t('app', 'Szczegóły'),'data-toggle'=>'tooltip'],
+        'updateOptions'=>['role'=>'modal-remote','title'=>Yii::t('app', 'Edytuj'), 'data-toggle'=>'tooltip'],
+        'deleteOptions'=>['role'=>'modal-remote','title'=>Yii::t('app', 'Usuń'),
                           'data-confirm'=>false, 'data-method'=>false,// for overide yii data api
                           'data-request-method'=>'post',
                           'data-toggle'=>'tooltip',
-                          'data-confirm-title'=>'Jesteś pewny?',
-                          'data-confirm-message'=>'Czy na pewno chcesz usunąć ten element?'],
+                          'data-confirm-title'=>Yii::t('app', 'Jesteś pewny?'),
+                          'data-confirm-message'=>Yii::t('app', 'Czy na pewno chcesz usunąć ten element?')],
     ],
 
 ];   

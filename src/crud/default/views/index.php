@@ -25,7 +25,7 @@ use johnitvn\ajaxcrud\BulkButtonWidget;
 <?= !empty($generator->searchModelClass) ? "/* @var \$searchModel " . ltrim($generator->searchModelClass, '\\') . " */\n" : '' ?>
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = "<?= $generator->plModelNamePlural ?>";
+$this->title = Yii::t('app', '<?= $generator->plModelNamePlural ?>');
 $this->params['breadcrumbs'][] = $this->title;
 
 CrudAsset::register($this);
@@ -44,9 +44,9 @@ CrudAsset::register($this);
             'toolbar'=> [
                 ['content'=>
                     Html::a('<i class="fa fa-plus" aria-hidden="true"></i>', ['create'],
-                    ['role'=>'modal-remote','title'=> 'Dodaj','class'=>'btn btn-default']).
+                    ['role'=>'modal-remote','title'=> Yii::t('app', 'Dodaj'),'class'=>'btn btn-default']).
                     Html::a('<i class="fa fa-repeat" aria-hidden="true"></i>', [''],
-                    ['data-pjax'=>1, 'class'=>'btn btn-default', 'title'=>'Odśwież']).
+                    ['data-pjax'=>1, 'class'=>'btn btn-default', 'title'=> Yii::t('app', 'Odśwież')]).
                     '{toggleData}'.
                     '{export}'
                 ],
@@ -56,7 +56,7 @@ CrudAsset::register($this);
             'responsive' => true,          
             'panel' => [
                 'type' => 'default',
-                'heading' => '<i class="fa fa-list" aria-hidden="true"></i> <?= $generator->plModelNamePlural ?> - lista',
+                'heading' => '<i class="fa fa-list" aria-hidden="true"></i> Yii::t('app', <?= $generator->plModelNamePlural ?>) - Yii::t('app', 'lista')',
             ],
             'export' => [
                 'target' => '_self',
