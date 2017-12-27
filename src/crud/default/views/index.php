@@ -56,7 +56,7 @@ CrudAsset::register($this);
             'responsive' => true,          
             'panel' => [
                 'type' => 'default',
-                'heading' => '<i class="fa fa-list" aria-hidden="true"></i> ' . Yii::t('app', <?= $generator->plModelNamePlural ?>) . '-' . Yii::t('app', 'lista'),
+                'heading' => '<i class="fa fa-list" aria-hidden="true"></i> ' . Yii::t('app', '<?= $generator->plModelNamePlural ?>') . '-' . Yii::t('app', 'lista'),
             ],
             'export' => [
                 'target' => '_self',
